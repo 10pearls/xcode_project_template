@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Kind</key>
+        <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+        <key>Identifier</key>
+        <string>com.10pearls.base_TargetSettings</string>
+        <!-- This template defines the basic build settings that should be shared by almost every target. It defines target-level settings that are declared non-concretely so inheritors will not create a target unless they specify their own concrete target definition. This template also includes some Swift-specific target settings that apply when the languageOption option is set to Swift. -->
+        <key>Targets</key>
+        <array>
+            <dict>
+                <!-- Declare basic stuff that is true of all targets, but mark this non-concrete so it won't cause actual creation of a target. -->
+                <key>Concrete</key>
+                <false/>
+                <key>Name</key>
+                <string>___PACKAGENAME___</string>
+                <key>ProductType</key>
+                <string>com.apple.product-type.application</string>
+                <key>SharedSettings</key>
+                <dict>
+                    <key>PRODUCT_NAME</key>
+                    <string>$(TARGET_NAME)</string>
+                </dict>
+                <key>BuildPhases</key>
+                <array>
+                    <dict>
+                        <key>Class</key>
+                        <string>Sources</string>
+                    </dict>
+                    <dict>
+                        <key>Class</key>
+                        <string>Frameworks</string>
+                    </dict>
+                    <dict>
+                        <key>Class</key>
+                        <string>Resources</string>
+                    </dict>
+                </array>
+                <key>Configurations</key>
+                <dict>
+                    <key>Debug</key>
+                    <dict/>
+                    <key>Release</key>
+                    <dict/>
+                </dict>
+            </dict>
+        </array>
+        <key>Options</key>
+        <array>
+            <dict>
+                <key>Identifier</key>
+                <string>languageChoice</string>
+                <key>Units</key>
+                <dict>
+                    <key>Swift</key>
+                    <dict>
+                        <key>Targets</key>
+                        <array>
+                            <dict>
+                                <!-- Declare basic stuff that is true of all Swift targets, but mark this non-concrete so it won't cause actual creation of a target. -->
+                                <key>Concrete</key>
+                                <false/>
+                                <key>SharedSettings</key>
+                                <dict>
+                                    <key>SWIFT_VERSION</key>
+                                    <string>4.0</string>
+                                </dict>
+                            </dict>
+                        </array>
+                    </dict>
+                </dict>
+            </dict>
+        </array>
+    </dict>
+</plist>

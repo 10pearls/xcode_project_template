@@ -1,0 +1,14 @@
+#source 'https://10.0.0.192/TP-Pod-Specs.git'
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+def shared_pods
+    pod 'Fabric'
+    pod 'Crashlytics'
+    pod 'MBProgressHUD'
+    #pod 'TPHttpRequestManager'
+end
+
+target '___PACKAGENAME___' do
+    shared_pods
+end

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.10pearls.deviceChoice</string>
+    <key>Platforms</key>
+    <array>
+        <string>com.apple.platform.iphoneos</string>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>deviceChoice</string>
+            <key>Required</key>
+            <true/>
+            <key>NotPersisted</key>
+            <true/>
+            <key>Name</key>
+            <string>Devices:</string>
+            <key>Description</key>
+            <string>Your targeted device.</string>
+            <key>Type</key>
+            <string>popup</string>
+            <key>Default</key>
+            <string>Universal</string>
+            <key>Values</key>
+            <array>
+                <string>Universal</string>
+                <string>iPhone</string>
+                <string>iPad</string>
+            </array>
+            <key>Variables</key>
+            <dict>
+                <key>Universal</key>
+                <dict>
+                    <key>targetedDeviceFamily</key>
+                    <string>1,2</string>
+                </dict>
+                <key>iPhone</key>
+                <dict>
+                    <key>targetedDeviceFamily</key>
+                    <string>1</string>
+                </dict>
+                <key>iPad</key>
+                <dict>
+                    <key>targetedDeviceFamily</key>
+                    <string>2</string>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+    <key>Project</key>
+    <dict>
+        <key>SDK</key>
+        <string>iphoneos</string>
+        <key>SharedSettings</key>
+        <dict>
+            <key>IPHONEOS_DEPLOYMENT_TARGET</key>
+            <string>9.0</string>
+            <key>TARGETED_DEVICE_FAMILY</key>
+            <string>___VARIABLE_targetedDeviceFamily___</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

@@ -12,6 +12,7 @@
             <string>com.10pearls.deviceChoice</string>
             <string>com.10pearls.languageChoice</string>
             <string>com.10pearls.testingChoices</string>
+            <string>com.10pearls.gitignore</string>
         </array>
         <key>Concrete</key>
         <true/>

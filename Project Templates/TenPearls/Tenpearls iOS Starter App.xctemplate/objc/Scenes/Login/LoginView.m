@@ -4,4 +4,16 @@
 
 @implementation LoginView
 
+- (IBAction)buttonLogin:(UIButton *)sender{
+    
+}
+
+- (IBAction)buttonRegister:(UIButton *)sender{
+    
+}
+
+- (IBAction)buttonForgotPassword:(UIButton *)sender{
+
+}
+
 @end

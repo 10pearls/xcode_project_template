@@ -1,4 +1,4 @@
-//  Created on ___DATE___.
+//___FILEHEADER___
 
 //#define SERVICE_URL @"http://api.socialradar.com"
 #define SERVICE_URL         @"http://private-3bb6f-mboconnect.apiary-mock.com/v1.0/"

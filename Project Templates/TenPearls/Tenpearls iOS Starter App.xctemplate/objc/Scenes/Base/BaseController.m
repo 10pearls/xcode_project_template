@@ -1,4 +1,4 @@
-//  Created on ___DATE___.
+//___FILEHEADER___
 
 #import "BaseController.h"
 #import "BaseView.h"

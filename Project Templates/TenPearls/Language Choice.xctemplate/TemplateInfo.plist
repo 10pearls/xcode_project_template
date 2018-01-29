@@ -20,9 +20,7 @@
             <key>Type</key>
             <string>popup</string>
             <key>Default</key>
-            <string>Swift</string>
-            <key>NotPersisted</key>
-            <true/>
+            <string>Objective-C</string>
             <key>Values</key>
             <array>
                 <string>Swift</string>

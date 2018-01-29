@@ -514,6 +514,20 @@
                                 <key>Group</key>
                                 <string>Constants</string>
                             </dict>
+                            <key>Controls/NibDesignable.h</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>objc/Controls/NibDesignable.h</string>
+                                <key>Group</key>
+                                <string>Controls</string>
+                            </dict>
+                            <key>Controls/NibDesignable.m</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>objc/Controls/NibDesignable.m</string>
+                                <key>Group</key>
+                                <string>Controls</string>
+                            </dict>
                             <key>Scenes/Base/BaseController.m</key>
                             <dict>
                                 <key>Path</key>
@@ -730,6 +744,8 @@
                             <string>Components/TextField.m</string>
                             <string>Components/TextField.h</string>
                             <string>Constants/Constant.h</string>
+                            <string>Controls/NibDesignable.m</string>
+                            <string>Controls/NibDesignable.h</string>
                             <string>Scenes/Base/BaseController.m</string>
                             <string>Scenes/Base/BaseController.h</string>
                             <string>Scenes/Base/BaseView.m</string>

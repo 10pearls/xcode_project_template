@@ -1,4 +1,6 @@
-#source 'https://10.0.0.192/TP-Pod-Specs.git'
+source 'http://10.0.0.192/git/TP-Pod-Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '9.0'
 inhibit_all_warnings!
 
@@ -6,7 +8,7 @@ def shared_pods
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'MBProgressHUD'
-    #pod 'TPHttpRequestManager'
+    pod 'TPHttpRequestManager'
 end
 
 target '___PACKAGENAME___' do

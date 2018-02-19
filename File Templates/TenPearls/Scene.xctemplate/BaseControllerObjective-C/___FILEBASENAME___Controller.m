@@ -1,12 +1,17 @@
 //___FILEHEADER___
 
 #import "___FILEBASENAME___.h"
+#import "___VARIABLE_productName:identifier___View.h"
 
 @interface ___FILEBASENAMEASIDENTIFIER___ ()
+
+@property(nonatomic, weak)___VARIABLE_productName:identifier___View *view;
 
 @end
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
+
+@dynamic view;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

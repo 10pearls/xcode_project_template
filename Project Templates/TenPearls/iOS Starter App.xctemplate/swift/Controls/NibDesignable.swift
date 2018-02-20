@@ -1,6 +1,7 @@
 //___FILEHEADER___
 
 import UIKit
+
 @IBDesignable
 class NibDesignable: BaseView {
 

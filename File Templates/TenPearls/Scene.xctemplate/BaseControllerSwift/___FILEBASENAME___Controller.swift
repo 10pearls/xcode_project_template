@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___Controller: BaseController {
+class ___FILEBASENAMEASIDENTIFIER___: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

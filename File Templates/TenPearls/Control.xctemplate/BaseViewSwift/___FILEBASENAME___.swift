@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___View: NibDesignable {
+class ___FILEBASENAMEASIDENTIFIER___: NibDesignable {
 
      /*
     // Only override draw() if you perform custom drawing.

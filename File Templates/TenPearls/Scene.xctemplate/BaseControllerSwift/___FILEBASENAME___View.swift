@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___View: BaseView {
+class ___FILEBASENAMEASIDENTIFIER___: BaseView {
 
      /*
     // Only override draw() if you perform custom drawing.

@@ -14,7 +14,7 @@ function main() {
 	unzip -a "/tmp/$repoZipFileName.zip" -d "/tmp/"
 
 	cd "/tmp/$repoZipFileName"*/
-	cd "./Installer Scripts/Installation Without Prompts"
+	cd "./InstallerScripts"
 	sh $projectTemplateDeploymentScript $repoZipFileName
 
 	sh $fileTemplateDeploymentScript $repoZipFileName

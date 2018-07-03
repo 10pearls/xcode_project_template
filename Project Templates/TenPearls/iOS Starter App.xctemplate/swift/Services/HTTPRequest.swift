@@ -12,7 +12,7 @@ struct HTTPRequest: ServiceRequestAdaptor {
             completionHandler = onComplete
             
             let manager: SessionManager = Alamofire.SessionManager.default
-            let operation = manager.request(req.urlAttributes().url,
+            let operation = manager.request(req.baseURL() + req.urlAttributes().url,
                                             method: req.urlAttributes().method.toAlamofireHttpMethod(),
                                             parameters: req.paramDictionary(),
                                             encoding: JSONEncoding.default,

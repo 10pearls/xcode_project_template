@@ -1,4 +1,4 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import Foundation
 import UIKit
@@ -6,9 +6,10 @@ import UIKit
 extension BaseController {
 
     // MARK: - Navigation Bar Handling
+    
     func setupNavigationBar() {
-        setupRightNavigationButtons(rightBarButtons: self.navigationBarRightButtons())
-        setupLeftNavigationButtons(leftBarButtons: self.navigationBarLeftButtons())
+        setupRightNavigationButtons(rightBarButtons: navigationBarRightButtons())
+        setupLeftNavigationButtons(leftBarButtons: navigationBarLeftButtons())
 
         //Do everything else with the Nav Bar here...
     }
@@ -23,6 +24,8 @@ extension BaseController {
         navigationItem.setLeftBarButtonItems(self.createNavigationBarItems(navBarItems: leftBarButtons), animated: true)
     }
 
+    // MARK: - UIBarButton Creation
+    
     private func createNavigationBarItems(navBarItems: [NavigationBarItem]) -> [UIBarButtonItem] {
         var barButtonItems = [UIBarButtonItem]()
         
@@ -35,20 +38,26 @@ extension BaseController {
         return UIBarButtonItem(customView: ButtonFactory.getNavBarButtonFrom(navBarItem: navBarItem))
     }
     
-    func createBackBarButton() {
-        
-        let backImage = #imageLiteral(resourceName: "slider_back")
-        let backButton = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(onActionBack(sender:)))
-        navigationItem.leftBarButtonItem = backButton
+    // MARK: - Back/Hamburger Creation
+    
+    func createBackBarButton() -> NavigationBarItem {
+        return NavigationBarItem(image: #imageLiteral(resourceName: "back_arrow"), target: self, onClickSelector: #selector(onActionBack(sender:)))
     }
+    
+    func createMenuBarButton() -> NavigationBarItem {
+        return NavigationBarItem(image: #imageLiteral(resourceName: "back_arrow"), target: self, onClickSelector: #selector(onMenuButtonTapped))
+    }
+    
+    // MARK: - Actions For Back/Ham burger menu
     
     @objc
     func onActionBack(sender: UIBarButtonItem) {
-        
-        if isModal() {
-            dismissViewController()
-        } else {
-            popViewController()
-        }
+        isModal ? dismiss() : pop()
     }
+    
+    @objc
+    func onMenuButtonTapped() {
+        //Do the Menu Toggling here...
+    }
+    
 }

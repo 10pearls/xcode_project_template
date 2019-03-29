@@ -1,9 +1,10 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import Foundation
 import UIKit
 
 class Alert {
+    
     class func show(title: String, message: String, okTitle: String, cancelTitle: String?, completionBlock:@escaping (_ okPressed: Bool) -> Void) -> UIAlertController {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -39,4 +40,5 @@ class Alert {
             
         }
     }
+    
 }

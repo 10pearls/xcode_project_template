@@ -1,40 +1,40 @@
-//___FILEHEADER___
+//  Created on 10/17/18.
 
 import UIKit
 
-typealias NavButtonSelector = () -> Void
-
 class NavigationBarItem: NSObject {
-
+    
     // MARK: - Members
     var title: String?
-    var imageName: String?
+    var image: UIImage?
     var tag: Int?
-    var onClickSelector: NavButtonSelector
-
+    var onClickSelector: Selector
+    var target: Any
+    
     // MARK: - Constructors
-    init(title: String?, imageName: String?, tag: Int?, onClickSelector: @escaping NavButtonSelector) {
+    init(title: String?, image: UIImage?, tag: Int?, target: Any, onClickSelector: Selector) {
         self.title = title
-        self.imageName = imageName
+        self.image = image
         self.tag = tag
         self.onClickSelector = onClickSelector
-
+        self.target = target
+        
         super.init()
     }
-
-    convenience init(title: String, tag: Int, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: title, imageName: nil, tag: tag, onClickSelector: onClickSelector)
+    
+    convenience init(title: String, tag: Int, target: Any, onClickSelector: Selector) {
+        self.init(title: title, image: nil, tag: tag, target: target, onClickSelector: onClickSelector)
     }
-
-    convenience init(imageName: String, tag: Int, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: nil, imageName: imageName, tag: tag, onClickSelector: onClickSelector)
+    
+    convenience init(image: UIImage, tag: Int, target: Any, onClickSelector: Selector) {
+        self.init(title: nil, image: image, tag: tag, target: target, onClickSelector: onClickSelector)
     }
-
-    convenience init(title: String, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: title, imageName: nil, tag: nil, onClickSelector: onClickSelector)
+    
+    convenience init(title: String, target: Any, onClickSelector: Selector) {
+        self.init(title: title, image: nil, tag: nil, target: target, onClickSelector: onClickSelector)
     }
-
-    convenience init(imageName: String, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: nil, imageName: imageName, tag: nil, onClickSelector: onClickSelector)
+    
+    convenience init(image: UIImage, target: Any, onClickSelector: Selector) {
+        self.init(title: nil, image: image, tag: nil, target: target, onClickSelector: onClickSelector)
     }
 }

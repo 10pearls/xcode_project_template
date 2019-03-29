@@ -1,4 +1,4 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import UIKit
 
@@ -10,8 +10,20 @@ extension BaseController {
     }
     
     func handleError(_ error: ErrorConvertible?) {
-        if let err = error {
-            print(err.errorMessage())
+        hideLoader()
+        
+        if error?.errorCode() == 401 {
+            forceLogoutUser()
+            return
         }
+        if let err = error {
+            _ = Alert.show(title: "Error", message: err.errorMessage())
+        }
+        
     }
+    
+    func forceLogoutUser() {
+        //Do Your Stuff here...
+    }
+    
 }

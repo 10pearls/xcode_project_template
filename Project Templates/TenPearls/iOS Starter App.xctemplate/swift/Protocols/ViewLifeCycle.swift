@@ -1,4 +1,4 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import UIKit
 
@@ -8,4 +8,5 @@ protocol ViewLifeCycle {
     func viewWillAppear()
     func viewDidAppear()
     func viewWillDisappear()
+    
 }

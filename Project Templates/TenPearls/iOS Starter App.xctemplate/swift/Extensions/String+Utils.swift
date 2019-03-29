@@ -1,13 +1,9 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import UIKit
 
 extension String {
-    
-    func toImage() -> UIImage? {
-        return UIImage(named: self)
-    }
-    
+
     func toClass() -> AnyClass? {
         
         if let info = Bundle.main.infoDictionary {
@@ -21,4 +17,5 @@ extension String {
         }
         return nil
     }
+    
 }

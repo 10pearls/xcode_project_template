@@ -1,4 +1,4 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import UIKit
 
@@ -10,16 +10,26 @@ class LoginController: BaseController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.navigationController?.navigationBar.isHidden = true
     }
     
     func login(user: User) {
+        HTTPAuthService.Login(userName: user.username, password: user.password) { result in
+            switch result {
+            case .success( _):
+                print("Success")
+                
+            case .failure( _):
+                print("Error")
+            }
+        }.makeRequest(ApiResponse<User>.self)
     }
     
     func register() {
+        push(Controller: LoginController())
     }
     
     func forgotPassword() {
+        
     }
+    
 }

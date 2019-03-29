@@ -1,41 +1,32 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import UIKit
 
 extension BaseController {
     
-    func push(Controller controller: UIViewController) {
-        navigationController?.pushViewController(controller, animated: true)
+    var isModal: Bool {
+        
+        let presentingIsModal = presentingViewController != nil
+        let presentingIsNavigation = navigationController?.presentingViewController?.presentedViewController == navigationController
+        let presentingIsTabBar = tabBarController?.presentingViewController is UITabBarController
+        
+        return presentingIsModal || presentingIsNavigation || presentingIsTabBar || false
     }
     
-    func present(Controller controller: UIViewController) {
+    func push(Controller controller: UIViewController, animated: Bool = true) {
+        navigationController?.pushViewController(controller, animated: animated)
+    }
+    
+    func pop(animated: Bool = true) {
+        _ = navigationController?.popViewController(animated: animated)
+    }
+    
+    func present(controller: UIViewController) {
         present(controller, animated: true, completion: nil)
     }
     
-    func popViewController() {
-       _ = navigationController?.popViewController(animated: true)
-    }
-    
-    func dismissViewController() {
+    func dismiss() {
         dismiss(animated: true, completion: nil)
     }
     
-    func isModal() -> Bool {
-        
-        if let presentingController = presentingViewController {
-            
-            if presentingController is UINavigationController {
-                return false
-            }
-            return true
-        }
-        if self.navigationController?.presentingViewController?.presentedViewController == self.navigationController {
-            return true
-        }
-        if self.tabBarController?.presentingViewController is UITabBarController {
-            return true
-        }
-        
-        return false
-    }
 }

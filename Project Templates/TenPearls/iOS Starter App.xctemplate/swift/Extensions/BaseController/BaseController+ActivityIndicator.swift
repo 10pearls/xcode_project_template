@@ -1,4 +1,4 @@
-//___FILEHEADER___
+//  Created on 29/03/2019.
 
 import MBProgressHUD
 import UIKit
@@ -17,4 +17,5 @@ extension BaseController {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.label.text = message
     }
+    
 }

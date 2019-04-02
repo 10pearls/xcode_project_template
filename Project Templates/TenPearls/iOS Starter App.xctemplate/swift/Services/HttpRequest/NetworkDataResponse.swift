@@ -1,4 +1,4 @@
-//  Created on 06/09/2018.
+// ___FILEHEADER___.
 
 import Foundation
 import Alamofire

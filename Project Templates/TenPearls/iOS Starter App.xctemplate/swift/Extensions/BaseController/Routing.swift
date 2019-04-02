@@ -1,4 +1,4 @@
-//  Created on 29/03/2019.
+// ___FILEHEADER___.
 
 import UIKit
 
@@ -17,8 +17,8 @@ extension BaseController {
         navigationController?.pushViewController(controller, animated: animated)
     }
     
-    func pop(animated: Bool = true) {
-        _ = navigationController?.popViewController(animated: animated)
+    func pop(animated: Bool = true) -> UIViewController? {
+        return navigationController?.popViewController(animated: animated)
     }
     
     func present(controller: UIViewController) {

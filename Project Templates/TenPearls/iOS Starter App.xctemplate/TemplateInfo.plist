@@ -62,13 +62,6 @@
 							<key>Group</key>
 							<string>Components</string>
 						</dict>
-						<key>Constants/Colors.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Constants/Colors.swift</string>
-							<key>Group</key>
-							<string>Constants</string>
-						</dict>
 						<key>Constants/Constants.swift</key>
 						<dict>
 							<key>Path</key>
@@ -83,13 +76,6 @@
 							<key>Group</key>
 							<string>Constants</string>
 						</dict>
-						<key>Constants/Fonts.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Constants/Fonts.swift</string>
-							<key>Group</key>
-							<string>Constants</string>
-						</dict>
 						<key>Controls/NibDesignable.swift</key>
 						<dict>
 							<key>Path</key>
@@ -101,13 +87,6 @@
 						<dict>
 							<key>Path</key>
 							<string>swift/Controls/Label.swift</string>
-							<key>Group</key>
-							<string>Controls</string>
-						</dict>
-						<key>Controls/TableView.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Controls/TableView.swift</string>
 							<key>Group</key>
 							<string>Controls</string>
 						</dict>
@@ -153,74 +132,74 @@
 							<key>Group</key>
 							<string>Entities</string>
 						</dict>
-						<key>Extensions/BaseController/BaseController+ActivityIndicator.swift</key>
+						<key>Extensions/BaseController/ActivityIndicator.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/BaseController/BaseController+ActivityIndicator.swift</string>
+							<string>swift/Extensions/BaseController/ActivityIndicator.swift</string>
 							<key>Group</key>
 							<array>
 								<string>Extensions</string>
 								<string>BaseController</string>
 							</array>
 						</dict>
-						<key>Extensions/BaseController/BaseController+ErrorHandling.swift</key>
+						<key>Extensions/BaseController/ErrorHandling.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/BaseController/BaseController+ErrorHandling.swift</string>
+							<string>swift/Extensions/BaseController/ErrorHandling.swift</string>
 							<key>Group</key>
 							<array>
 								<string>Extensions</string>
 								<string>BaseController</string>
 							</array>
 						</dict>
-						<key>Extensions/BaseController/BaseController+NavigationBar.swift</key>
+						<key>Extensions/BaseController/NavigationBar.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/BaseController/BaseController+NavigationBar.swift</string>
+							<string>swift/Extensions/BaseController/NavigationBar.swift</string>
 							<key>Group</key>
 							<array>
 								<string>Extensions</string>
 								<string>BaseController</string>
 							</array>
 						</dict>
-						<key>Extensions/BaseController/BaseController+Routing.swift</key>
+						<key>Extensions/BaseController/Routing.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/BaseController/BaseController+Routing.swift</string>
+							<string>swift/Extensions/BaseController/Routing.swift</string>
 							<key>Group</key>
 							<array>
 								<string>Extensions</string>
 								<string>BaseController</string>
 							</array>
 						</dict>
-						<key>Extensions/BaseController/BaseController+ViewLoader.swift</key>
+						<key>Extensions/BaseController/ViewLoader.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/BaseController/BaseController+ViewLoader.swift</string>
+							<string>swift/Extensions/BaseController/ViewLoader.swift</string>
 							<key>Group</key>
 							<array>
 								<string>Extensions</string>
 								<string>BaseController</string>
 							</array>
 						</dict>
-						<key>Extensions/String+Utils.swift</key>
+						<key>Extensions/String.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/String+Utils.swift</string>
+							<string>swift/Extensions/String.swift</string>
 							<key>Group</key>
 							<string>Extensions</string>
 						</dict>
-						<key>Extensions/UIView+Utils.swift</key>
+						<key>Extensions/ViewLayerUtils.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/UIView+Utils.swift</string>
+							<string>swift/Extensions/ViewLayerUtils.swift</string>
 							<key>Group</key>
 							<string>Extensions</string>
 						</dict>
 						<key>Extensions/Coders.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Extensions/Coder.swift</string>
+							<string>swift/Extensions/Coders.swift</string>
 							<key>Group</key>
 							<string>Extensions</string>
 						</dict>
@@ -231,19 +210,12 @@
 							<key>Group</key>
 							<string>Factories</string>
 						</dict>
-						<key>ObjC/TryCatch.h</key>
+						<key>Protocols/TableView.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/ObjC/TryCatch.h</string>
+							<string>swift/Protocols/TableView.swift</string>
 							<key>Group</key>
-							<string>ObjC</string>
-						</dict>
-						<key>ObjC/TryCatch.m</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/ObjC/TryCatch.m</string>
-							<key>Group</key>
-							<string>ObjC</string>
+							<string>Protocols</string>
 						</dict>
 						<key>Protocols/NavigationBarDataSource.swift</key>
 						<dict>
@@ -337,31 +309,34 @@
 							<key>Group</key>
 							<string>ServiceResponses</string>
 						</dict>
-						<key>Services/Helpers/HTTPRequest.swift</key>
+						<key>Services/HTTPRequest/HTTPRequest.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Services/Helpers/HTTPRequest.swift</string>
-							<key>Group</key>
-							<string>Services</string>
-						</dict>
-						<key>Services/Helpers/NetworkDataResponse.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Services/Helpers/NetworkDataResponse.swift</string>
+							<string>swift/Services/HTTPRequest/HTTPRequest.swift</string>
 							<key>Group</key>
 							<array>
 								<string>Services</string>
-								<string>Helpers</string>
+								<string>HTTPRequest</string>
 							</array>
 						</dict>
-						<key>Services/Helpers/ServiceRequestAdaptor.swift</key>
+						<key>Services/HTTPRequest/NetworkDataResponse.swift</key>
 						<dict>
 							<key>Path</key>
-							<string>swift/Services/Helpers/ServiceRequestAdaptor.swift</string>
+							<string>swift/Services/HTTPRequest/NetworkDataResponse.swift</string>
 							<key>Group</key>
 							<array>
 								<string>Services</string>
-								<string>Helpers</string>
+								<string>HTTPRequest</string>
+							</array>
+						</dict>
+						<key>Services/HTTPRequest/ServiceRequestAdaptor.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Services/HTTPRequest/ServiceRequestAdaptor.swift</string>
+							<key>Group</key>
+							<array>
+								<string>Services</string>
+								<string>HTTPRequest</string>
 							</array>
 						</dict>
 						<key>Services/HTTPServices/HTTPAuthService.swift</key>
@@ -424,6 +399,13 @@
 								<string>Headers</string>
 							</array>
 						</dict>
+						<key>Utils/Fonts.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Utils/Fonts.swift</string>
+							<key>Group</key>
+							<string>Utils</string>
+						</dict>
 						<key>Utils/Alert.swift</key>
 						<dict>
 							<key>Path</key>
@@ -445,13 +427,6 @@
 							<key>Group</key>
 							<string>Enums</string>
 						</dict>
-						<key>Helpers/Defaults.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Helpers/Defaults.swift</string>
-							<key>Group</key>
-							<string>Helpers</string>
-						</dict>
 					</dict>
 					<key>Nodes</key>
 					<array>
@@ -459,29 +434,25 @@
 						<string>Components/CollectionViewCell.swift</string>
 						<string>Components/TableViewCell.swift</string>
 						<string>Constants/Constants.swift</string>
-						<string>Constants/Colors.swift</string>
-						<string>Constants/Fonts.swift</string>
 						<string>Constants/Strings.swift</string>
 						<string>Controls/NibDesignable.swift</string>
 						<string>Controls/Label.swift</string>
-						<string>Controls/TableView.swift</string>
 						<string>Controls/TextField.swift</string>
 						<string>Controls/Button.swift</string>
 						<string>Entities/ServiceError.swift</string>
 						<string>Entities/Meta.swift</string>
 						<string>Entities/NavigationBarItem.swift</string>
 						<string>Entities/User.swift</string>
-						<string>Extensions/BaseController/BaseController+ActivityIndicator.swift</string>
-						<string>Extensions/BaseController/BaseController+ErrorHandling.swift</string>
-						<string>Extensions/BaseController/BaseController+NavigationBar.swift</string>
-						<string>Extensions/BaseController/BaseController+Routing.swift</string>
-						<string>Extensions/BaseController/BaseController+ViewLoader.swift</string>
-						<string>Extensions/String+Utils.swift</string>
-						<string>Extensions/UIView+Utils.swift</string>
+						<string>Extensions/BaseController/ActivityIndicator.swift</string>
+						<string>Extensions/BaseController/ErrorHandling.swift</string>
+						<string>Extensions/BaseController/NavigationBar.swift</string>
+						<string>Extensions/BaseController/Routing.swift</string>
+						<string>Extensions/BaseController/ViewLoader.swift</string>
+						<string>Extensions/String.swift</string>
+						<string>Extensions/ViewLayerUtils.swift</string>
 						<string>Extensions/Coders.swift</string>
 						<string>Factories/ButtonFactory.swift</string>
-						<string>ObjC/TryCatch.h</string>
-						<string>ObjC/TryCatch.m</string>
+						<string>Protocols/TableView.swift</string>
 						<string>Protocols/NavigationBarDataSource.swift</string>
 						<string>Protocols/NibLoadable.swift</string>
 						<string>Protocols/ReusableView.swift</string>
@@ -493,9 +464,9 @@
 						<string>Scenes/Login/LoginView.swift</string>
 						<string>Scenes/Login/LoginView.xib</string>
 						<string>ServiceResponses/ApiResponse.swift</string>
-						<string>Services/Helpers/HTTPRequest.swift</string>
-						<string>Services/Helpers/NetworkDataResponse.swift</string>
-						<string>Services/Helpers/ServiceRequestAdaptor.swift</string>
+						<string>Services/HTTPRequest/HTTPRequest.swift</string>
+						<string>Services/HTTPRequest/NetworkDataResponse.swift</string>
+						<string>Services/HTTPRequest/ServiceRequestAdaptor.swift</string>
 						<string>Services/HTTPServices/HTTPAuthService.swift</string>
 						<string>Services/Protocols/HTTPRequestProtocol.swift</string>
 						<string>Services/Protocols/RequestProtocol.swift</string>
@@ -504,8 +475,8 @@
 						<string>SupportingFiles/Headers/Headers.h</string>
 						<string>Utils/Alert.swift</string>
 						<string>Utils/Appearance.swift</string>
+						<string>Utils/Fonts.swift</string>
 						<string>Enums/Enums.swift</string>
-						<string>Helpers/Defaults.swift</string>
 					</array>
 				</dict>
 				<key>Objective-C</key>

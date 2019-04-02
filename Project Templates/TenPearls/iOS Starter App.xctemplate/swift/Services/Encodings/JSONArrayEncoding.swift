@@ -1,4 +1,4 @@
-//  Created on 06/10/2018.
+// ___FILEHEADER___.
 //
 // https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#custom-encoding
 

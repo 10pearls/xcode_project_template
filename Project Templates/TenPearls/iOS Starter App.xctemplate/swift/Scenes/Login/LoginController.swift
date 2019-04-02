@@ -1,4 +1,4 @@
-//  Created on 29/03/2019.
+// ___FILEHEADER___.
 
 import UIKit
 
@@ -7,7 +7,7 @@ class LoginController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

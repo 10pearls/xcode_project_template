@@ -1,4 +1,4 @@
-//  Created on 04/12/2018.
+// ___FILEHEADER___.
 
 struct ApiResponse <T: Codable>: Codable {
     

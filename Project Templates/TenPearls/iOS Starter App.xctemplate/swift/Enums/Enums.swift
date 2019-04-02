@@ -1,6 +1,7 @@
-//  Created on 29/03/2019.
+// ___FILEHEADER___.
 
 import Foundation
+import UIKit
 
 enum FontType: String {
     
@@ -9,5 +10,12 @@ enum FontType: String {
     case medium = "SFProDisplay-Medium"
     case semiBold = "SFProDisplay-Semibold"
     case bold = "SFProDisplay-Bold"
+    
+}
+
+enum BarItemType {
+    
+    case titleButton(title: String)
+    case imageButton(image: UIImage)
     
 }

@@ -1,4 +1,4 @@
-//  Created on 29/03/2019.
+// ___FILEHEADER___.
 
 import UIKit
 
@@ -18,17 +18,17 @@ extension UILabel {
         if let face = font.fontDescriptor.object(forKey: .face) as? String {
             switch face {
             case "Regular":
-                font = Fonts.regularFontWithSize(fontSize: font.pointSize)
+                font = Fonts.font(withType: .regular, andFontSize: font.pointSize)
             case "Bold":
-                font = Fonts.boldFontWithSize(fontSize: font.pointSize)
+                font = Fonts.font(withType: .bold, andFontSize: font.pointSize)
             case "Light":
-                font = Fonts.lightFontWithSize(fontSize: font.pointSize)
+                font = Fonts.font(withType: .light, andFontSize: font.pointSize)
             case "Medium":
-                font = Fonts.mediumFontWithSize(fontSize: font.pointSize)
+                font = Fonts.font(withType: .medium, andFontSize: font.pointSize)
             case "Semibold":
-                font = Fonts.semiBoldFontWithSize(fontSize: font.pointSize)
+                font = Fonts.font(withType: .semiBold, andFontSize: font.pointSize)
             default:
-                font = Fonts.regularFontWithSize(fontSize: font.pointSize)
+                font = Fonts.font(withType: .regular, andFontSize: font.pointSize)
             }
         }
     }

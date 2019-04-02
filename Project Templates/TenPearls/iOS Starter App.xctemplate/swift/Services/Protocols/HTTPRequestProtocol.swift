@@ -1,4 +1,4 @@
-//  Created on 06/09/2018.
+// ___FILEHEADER___.
 
 import Alamofire
 
@@ -32,7 +32,8 @@ extension HTTPRequestProtocol {
 
     func headers() -> [String: String]? {
         var headers = [String: String]()
-        if let token = Defaults.getAccessToken(), !token.isEmpty {
+        let token: String = "" //Get Token from Defaults
+        if !token.isEmpty {
             headers["Authorization"] = "Bearer \(token)"
         }
         

@@ -1,4 +1,4 @@
-//  Created on 29/03/2019.
+//___FILEHEADER___.
 
 import Foundation
 import UIKit
@@ -41,18 +41,27 @@ extension BaseController {
     // MARK: - Back/Hamburger Creation
     
     func createBackBarButton() -> NavigationBarItem {
-        return NavigationBarItem(image: #imageLiteral(resourceName: "back_arrow"), target: self, onClickSelector: #selector(onActionBack(sender:)))
+        return NavigationBarItem(type: .imageButton(image: #imageLiteral(resourceName: "back_arrow")),
+                                 target: self,
+                                 onClickSelector: #selector(onActionBack(sender:)))
     }
     
     func createMenuBarButton() -> NavigationBarItem {
-        return NavigationBarItem(image: #imageLiteral(resourceName: "back_arrow"), target: self, onClickSelector: #selector(onMenuButtonTapped))
+        return NavigationBarItem(type: .imageButton(image: #imageLiteral(resourceName: "back_arrow")),
+                                 target: self,
+                                 onClickSelector: #selector(onMenuButtonTapped))
     }
     
     // MARK: - Actions For Back/Ham burger menu
     
     @objc
     func onActionBack(sender: UIBarButtonItem) {
-        isModal ? dismiss() : pop()
+        if isModal {
+            dismiss()
+            return
+        }
+        
+        _ = pop()
     }
     
     @objc

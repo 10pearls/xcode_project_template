@@ -1,4 +1,4 @@
-//  Created on 10/17/18.
+// ___FILEHEADER___.
 
 import UIKit
 
@@ -12,29 +12,20 @@ class NavigationBarItem: NSObject {
     var target: Any
     
     // MARK: - Constructors
-    init(title: String?, image: UIImage?, tag: Int?, target: Any, onClickSelector: Selector) {
-        self.title = title
-        self.image = image
+    
+    init(type: BarItemType, tag: Int? = 0, target: Any, onClickSelector: Selector) {
         self.tag = tag
         self.onClickSelector = onClickSelector
         self.target = target
         
+        switch type {
+        case .titleButton(let title):
+            self.title = title
+        case .imageButton(let image):
+            self.image = image
+        }
+        
         super.init()
     }
     
-    convenience init(title: String, tag: Int, target: Any, onClickSelector: Selector) {
-        self.init(title: title, image: nil, tag: tag, target: target, onClickSelector: onClickSelector)
-    }
-    
-    convenience init(image: UIImage, tag: Int, target: Any, onClickSelector: Selector) {
-        self.init(title: nil, image: image, tag: tag, target: target, onClickSelector: onClickSelector)
-    }
-    
-    convenience init(title: String, target: Any, onClickSelector: Selector) {
-        self.init(title: title, image: nil, tag: nil, target: target, onClickSelector: onClickSelector)
-    }
-    
-    convenience init(image: UIImage, target: Any, onClickSelector: Selector) {
-        self.init(title: nil, image: image, tag: nil, target: target, onClickSelector: onClickSelector)
-    }
 }

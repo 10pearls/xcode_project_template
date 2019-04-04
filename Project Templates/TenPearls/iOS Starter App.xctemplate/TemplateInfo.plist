@@ -104,6 +104,12 @@
 							<key>Group</key>
 							<string>Controls</string>
 						</dict>
+						<dict>
+							<key>Path</key>
+							<string>swift/Controls/TextView.swift</string>
+							<key>Group</key>
+							<string>Controls</string>
+						</dict>
 						<key>Entities/Meta.swift</key>
 						<dict>
 							<key>Path</key>
@@ -436,6 +442,7 @@
 						<string>Constants/Constants.swift</string>
 						<string>Constants/Strings.swift</string>
 						<string>Controls/NibDesignable.swift</string>
+						<string>Controls/TextView.swift</string>
 						<string>Controls/Label.swift</string>
 						<string>Controls/TextField.swift</string>
 						<string>Controls/Button.swift</string>

@@ -7,7 +7,7 @@ def shared_pods
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'MBProgressHUD'
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 4.8.2'
 end
 
 target '___PACKAGENAME___' do

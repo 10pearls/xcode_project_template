@@ -1,10 +1,12 @@
 // ___FILEHEADER___.
 
 import UIKit
+import MBProgressHUD
 
-class BaseController: UIViewController, NavigationBarProtocol {
+class BaseController: UIViewController {
 
     // MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +35,12 @@ class BaseController: UIViewController, NavigationBarProtocol {
         (self.view as? BaseView)?.viewWillDisappear()
     }
     
+}
+
+//MARK: - Navigation Bar Protocol Implementation
+
+extension BaseController: NavigationBarProtocol {
+    
     func navigationBarRightButtons() -> [NavigationBarItem] {
         return [] //Will be overriden by individual Controllers
     }
@@ -40,4 +48,24 @@ class BaseController: UIViewController, NavigationBarProtocol {
     func navigationBarLeftButtons() -> [NavigationBarItem] {
         return [] //Will be overriden by individual Controllers
     }
+    
+}
+
+// MARK: - Activity Indicator Implementation
+
+extension BaseController: ActivityIndicator {
+    
+    func showLoader() {
+        MBProgressHUD.showAdded(to: view, animated: true)
+    }
+    
+    func hideLoader() {
+        MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    func showLoaderWith(message: String) {
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.label.text = message
+    }
+    
 }

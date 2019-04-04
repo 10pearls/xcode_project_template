@@ -1,8 +1,14 @@
 // ___FILEHEADER___.
 
-import UIKit
+protocol ErrorHandling {
+    
+    func throwException(message: String)
+    func handleError(_ error: ErrorConvertible?)
+    func forceLogoutUser()
+    
+}
 
-extension BaseController {
+extension ErrorHandling where Self: ActivityIndicator {
     
     func throwException(message: String) {
         let exception = NSException(name: NSExceptionName(rawValue: message), reason: nil, userInfo: nil)

@@ -97,6 +97,13 @@
 							<key>Group</key>
 							<string>Controls</string>
 						</dict>
+						<key>Controls/TextView.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Controls/TextView.swift</string>
+							<key>Group</key>
+							<string>Controls</string>
+						</dict>
 						<key>Controls/Button.swift</key>
 						<dict>
 							<key>Path</key>
@@ -104,12 +111,7 @@
 							<key>Group</key>
 							<string>Controls</string>
 						</dict>
-						<dict>
-							<key>Path</key>
-							<string>swift/Controls/TextView.swift</string>
-							<key>Group</key>
-							<string>Controls</string>
-						</dict>
+						
 						<key>Entities/Meta.swift</key>
 						<dict>
 							<key>Path</key>
@@ -137,26 +139,6 @@
 							<string>swift/Entities/User.swift</string>
 							<key>Group</key>
 							<string>Entities</string>
-						</dict>
-						<key>Extensions/BaseController/ActivityIndicator.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Extensions/BaseController/ActivityIndicator.swift</string>
-							<key>Group</key>
-							<array>
-								<string>Extensions</string>
-								<string>BaseController</string>
-							</array>
-						</dict>
-						<key>Extensions/BaseController/ErrorHandling.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Extensions/BaseController/ErrorHandling.swift</string>
-							<key>Group</key>
-							<array>
-								<string>Extensions</string>
-								<string>BaseController</string>
-							</array>
 						</dict>
 						<key>Extensions/BaseController/NavigationBar.swift</key>
 						<dict>
@@ -188,13 +170,6 @@
 								<string>BaseController</string>
 							</array>
 						</dict>
-						<key>Extensions/String.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Extensions/String.swift</string>
-							<key>Group</key>
-							<string>Extensions</string>
-						</dict>
 						<key>Extensions/ViewLayerUtils.swift</key>
 						<dict>
 							<key>Path</key>
@@ -215,6 +190,20 @@
 							<string>swift/Factories/ButtonFactory.swift</string>
 							<key>Group</key>
 							<string>Factories</string>
+						</dict>
+						<key>Protocols/ActivityIndicator.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Protocols/ActivityIndicator.swift</string>
+							<key>Group</key>
+							<string>Protocols</string>
+						</dict>
+						<key>Protocols/ErrorHandling.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Protocols/ErrorHandling.swift</string>
+							<key>Group</key>
+							<string>Protocols</string>
 						</dict>
 						<key>Protocols/TableView.swift</key>
 						<dict>
@@ -450,15 +439,14 @@
 						<string>Entities/Meta.swift</string>
 						<string>Entities/NavigationBarItem.swift</string>
 						<string>Entities/User.swift</string>
-						<string>Extensions/BaseController/ActivityIndicator.swift</string>
-						<string>Extensions/BaseController/ErrorHandling.swift</string>
 						<string>Extensions/BaseController/NavigationBar.swift</string>
 						<string>Extensions/BaseController/Routing.swift</string>
 						<string>Extensions/BaseController/ViewLoader.swift</string>
-						<string>Extensions/String.swift</string>
 						<string>Extensions/ViewLayerUtils.swift</string>
 						<string>Extensions/Coders.swift</string>
 						<string>Factories/ButtonFactory.swift</string>
+						<string>Protocols/ActivityIndicator.swift</string>
+						<string>Protocols/ErrorHandling.swift</string>
 						<string>Protocols/TableView.swift</string>
 						<string>Protocols/NavigationBarDataSource.swift</string>
 						<string>Protocols/NibLoadable.swift</string>

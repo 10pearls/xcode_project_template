@@ -3,7 +3,7 @@
 import UIKit
 import MBProgressHUD
 
-class BaseController: UIViewController {
+class BaseController: UIViewController, ErrorHandling {
 
     // MARK: - Life Cycle Methods
     
@@ -37,8 +37,6 @@ class BaseController: UIViewController {
     
 }
 
-//MARK: - Navigation Bar Protocol Implementation
-
 extension BaseController: NavigationBarProtocol {
     
     func navigationBarRightButtons() -> [NavigationBarItem] {
@@ -50,8 +48,6 @@ extension BaseController: NavigationBarProtocol {
     }
     
 }
-
-// MARK: - Activity Indicator Implementation
 
 extension BaseController: ActivityIndicator {
     

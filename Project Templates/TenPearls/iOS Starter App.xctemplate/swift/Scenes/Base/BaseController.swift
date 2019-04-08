@@ -35,7 +35,7 @@ class BaseController: UIViewController, ErrorHandling, NavigationBarProtocol {
     // MARK: - Back/Hamburger Button handling
     
     func createBackBarButton() -> NavigationBarItem {
-        let menuButton = NavigationBarItem(type: .imageButton(image: #imageLiteral(resourceName: "backArrowBlue")), target: self, onClickSelector: #selector(onActionBack(sender:)))
+        let menuButton = NavigationBarItem(type: .imageButton(image: UIImage(named: "back-btn")), target: self, onClickSelector: #selector(onActionBack(sender:)))
         return menuButton
     }
     
@@ -49,7 +49,7 @@ class BaseController: UIViewController, ErrorHandling, NavigationBarProtocol {
     }
     
     func createMenuBarButton() -> NavigationBarItem {
-        let menuButton = NavigationBarItem(type: .imageButton(image: #imageLiteral(resourceName: "backArrowBlue")), target: self, onClickSelector: #selector(onMenuButtonTapped))
+        let menuButton = NavigationBarItem(type: .imageButton(image: UIImage(named: "menu-btn")), target: self, onClickSelector: #selector(onMenuButtonTapped))
         return menuButton
     }
     

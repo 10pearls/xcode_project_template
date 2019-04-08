@@ -37,8 +37,8 @@ class Appearance: NSObject {
     class func setupTabBarItem() {
         let appearance = UITabBarItem.appearance()
         
-        appearance.setTitleTextAttributes([NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.gray], for: .normal)
-        appearance.setTitleTextAttributes([NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.black], for: .selected)
+        appearance.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.gray], for: .normal)
+        appearance.setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.black], for: .selected)
     }
     
     class func setStatusBarBackgroundColor(color: UIColor) {

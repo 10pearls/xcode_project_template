@@ -23,8 +23,8 @@ class RootController: UIViewController {
     }
     
     private func animateFadeTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
-        current.willMove(toParentViewController: nil)
-        addChildViewController(new)
+        current.willMove(toParent: nil)
+        addChild(new)
         new.view.frame = view.bounds
         
         transition(from: current,
@@ -33,8 +33,8 @@ class RootController: UIViewController {
                    options: [.transitionCrossDissolve, .curveEaseOut],
                    animations: nil,
                    completion: { [weak self] _ in
-                    self?.current.removeFromParentViewController()
-                    new.didMove(toParentViewController: self)
+                    self?.current.removeFromParent()
+                    new.didMove(toParent: self)
                     self?.current = new
                     completion?()
                    }
@@ -42,9 +42,9 @@ class RootController: UIViewController {
     }
     
     func addChildController(controller: UIViewController) {
-        addChildViewController(current)
+        addChild(current)
         current.view.frame = view.bounds
         view.addSubview(current.view)
-        current.didMove(toParentViewController: self)
+        current.didMove(toParent: self)
     }
 }

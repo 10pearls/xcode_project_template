@@ -10,7 +10,7 @@ extension UIViewController {
         let presentingIsNavigation = navigationController?.presentingViewController?.presentedViewController == navigationController
         let presentingIsTabBar = tabBarController?.presentingViewController is UITabBarController
         
-        return presentingIsModal || presentingIsNavigation || presentingIsTabBar || false
+        return presentingIsModal || presentingIsNavigation || presentingIsTabBar
     }
     
     func push(Controller controller: UIViewController, animated: Bool = true) {

@@ -1,6 +1,7 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
 
 import UIKit
+import MBProgressHUD
 
 protocol ActivityIndicator {
     

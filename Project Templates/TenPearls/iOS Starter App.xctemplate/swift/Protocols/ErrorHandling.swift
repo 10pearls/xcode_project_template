@@ -1,4 +1,6 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
+
+import UIKit
 
 protocol ErrorHandling {
     

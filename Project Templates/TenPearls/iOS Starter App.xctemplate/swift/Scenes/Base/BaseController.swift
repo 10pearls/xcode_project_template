@@ -1,9 +1,8 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
 
 import UIKit
-import MBProgressHUD
 
-class BaseController: UIViewController, ErrorHandling {
+class BaseController: UIViewController, ErrorHandling, NavigationBarProtocol {
 
     // MARK: - Life Cycle Methods
     
@@ -17,8 +16,6 @@ class BaseController: UIViewController, ErrorHandling {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.navigationController?.navigationBar.isHidden = false
         
         (self.view as? BaseView)?.viewWillAppear()
     }
@@ -35,33 +32,29 @@ class BaseController: UIViewController, ErrorHandling {
         (self.view as? BaseView)?.viewWillDisappear()
     }
     
-}
-
-extension BaseController: NavigationBarProtocol {
+    // MARK: - Back/Hamburger Button handling
     
-    func navigationBarRightButtons() -> [NavigationBarItem] {
-        return [] //Will be overriden by individual Controllers
+    func createBackBarButton() -> NavigationBarItem {
+        let menuButton = NavigationBarItem(type: .imageButton(image: #imageLiteral(resourceName: "backArrowBlue")), target: self, onClickSelector: #selector(onActionBack(sender:)))
+        return menuButton
     }
     
-    func navigationBarLeftButtons() -> [NavigationBarItem] {
-        return [] //Will be overriden by individual Controllers
+    @objc
+    func onActionBack(sender: UIBarButtonItem) {
+        if isModal {
+            dismiss(animated: true, completion: nil)
+        } else {
+            _ = pop()
+        }
     }
     
-}
-
-extension BaseController: ActivityIndicator {
-    
-    func showLoader() {
-        MBProgressHUD.showAdded(to: view, animated: true)
+    func createMenuBarButton() -> NavigationBarItem {
+        let menuButton = NavigationBarItem(type: .imageButton(image: #imageLiteral(resourceName: "backArrowBlue")), target: self, onClickSelector: #selector(onMenuButtonTapped))
+        return menuButton
     }
     
-    func hideLoader() {
-        MBProgressHUD.hide(for: view, animated: true)
-    }
-    
-    func showLoaderWith(message: String) {
-        let hud = MBProgressHUD.showAdded(to: view, animated: true)
-        hud.label.text = message
+    @objc
+    func onMenuButtonTapped() {
     }
     
 }

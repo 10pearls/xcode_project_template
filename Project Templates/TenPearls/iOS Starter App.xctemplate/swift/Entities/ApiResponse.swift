@@ -1,4 +1,4 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
 
 struct ApiResponse <T: Codable>: Codable {
     

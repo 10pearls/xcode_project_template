@@ -1,10 +1,18 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
 
 import UIKit
+
+enum BarItemType {
+    
+    case titleButton(title: String)
+    case imageButton(image: UIImage)
+    
+}
 
 class NavigationBarItem: NSObject {
     
     // MARK: - Members
+    
     var title: String?
     var image: UIImage?
     var tag: Int?
@@ -29,3 +37,4 @@ class NavigationBarItem: NSObject {
     }
     
 }
+

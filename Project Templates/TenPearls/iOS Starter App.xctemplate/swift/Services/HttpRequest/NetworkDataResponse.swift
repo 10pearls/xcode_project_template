@@ -1,4 +1,4 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
 
 import Foundation
 import Alamofire
@@ -12,7 +12,7 @@ protocol ErrorConvertible {
 extension ErrorConvertible {
 
     func errorMessage() -> String {
-        return Strings.kGeneralError
+        return "Something went wrong!"
     }
     
     func errorCode() -> Int {

@@ -48,6 +48,13 @@
 							<key>Group</key>
 							<string>AppDelegate</string>
 						</dict>
+						<key>AppDelegate/RootController.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/AppDelegate/RootController.swift</string>
+							<key>Group</key>
+							<string>AppDelegate</string>
+						</dict>
 						<key>Components/CollectionViewCell.swift</key>
 						<dict>
 							<key>Path</key>
@@ -66,13 +73,6 @@
 						<dict>
 							<key>Path</key>
 							<string>swift/Constants/Constants.swift</string>
-							<key>Group</key>
-							<string>Constants</string>
-						</dict>
-						<key>Constants/Strings.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Constants/Strings.swift</string>
 							<key>Group</key>
 							<string>Constants</string>
 						</dict>
@@ -111,7 +111,13 @@
 							<key>Group</key>
 							<string>Controls</string>
 						</dict>
-						
+						<key>Entities/ApiResponse.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Entities/ApiResponse.swift</string>
+							<key>Group</key>
+							<string>Entities</string>
+						</dict>
 						<key>Entities/Meta.swift</key>
 						<dict>
 							<key>Path</key>
@@ -140,26 +146,6 @@
 							<key>Group</key>
 							<string>Entities</string>
 						</dict>
-						<key>Extensions/BaseController/NavigationBar.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Extensions/BaseController/NavigationBar.swift</string>
-							<key>Group</key>
-							<array>
-								<string>Extensions</string>
-								<string>BaseController</string>
-							</array>
-						</dict>
-						<key>Extensions/BaseController/Routing.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Extensions/BaseController/Routing.swift</string>
-							<key>Group</key>
-							<array>
-								<string>Extensions</string>
-								<string>BaseController</string>
-							</array>
-						</dict>
 						<key>Extensions/BaseController/ViewLoader.swift</key>
 						<dict>
 							<key>Path</key>
@@ -169,6 +155,20 @@
 								<string>Extensions</string>
 								<string>BaseController</string>
 							</array>
+						</dict>
+						<key>Extensions/LocalizedString.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Extensions/LocalizedString.swift</string>
+							<key>Group</key>
+							<string>Extensions</string>
+						</dict>
+						<key>Extensions/Routing.swift</key>
+						<dict>
+							<key>Path</key>
+							<string>swift/Extensions/Routing.swift</string>
+							<key>Group</key>
+							<string>Extensions</string>
 						</dict>
 						<key>Extensions/ViewLayerUtils.swift</key>
 						<dict>
@@ -297,13 +297,6 @@
 								<string>Login</string>
 							</array>
 						</dict>
-						<key>ServiceResponses/ApiResponse.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/ServiceResponses/ApiResponse.swift</string>
-							<key>Group</key>
-							<string>ServiceResponses</string>
-						</dict>
 						<key>Services/HTTPRequest/HTTPRequest.swift</key>
 						<dict>
 							<key>Path</key>
@@ -426,21 +419,22 @@
 					<key>Nodes</key>
 					<array>
 						<string>AppDelegate/AppDelegate.swift</string>
+						<string>AppDelegate/RootController.swift</string>
 						<string>Components/CollectionViewCell.swift</string>
 						<string>Components/TableViewCell.swift</string>
 						<string>Constants/Constants.swift</string>
-						<string>Constants/Strings.swift</string>
 						<string>Controls/NibDesignable.swift</string>
 						<string>Controls/TextView.swift</string>
 						<string>Controls/Label.swift</string>
 						<string>Controls/TextField.swift</string>
 						<string>Controls/Button.swift</string>
+						<string>Entities/ApiResponse.swift</string>
 						<string>Entities/ServiceError.swift</string>
 						<string>Entities/Meta.swift</string>
 						<string>Entities/NavigationBarItem.swift</string>
 						<string>Entities/User.swift</string>
-						<string>Extensions/BaseController/NavigationBar.swift</string>
-						<string>Extensions/BaseController/Routing.swift</string>
+						<string>Extensions/Routing.swift</string>
+						<string>Extensions/LocalizedString.swift</string>
 						<string>Extensions/BaseController/ViewLoader.swift</string>
 						<string>Extensions/ViewLayerUtils.swift</string>
 						<string>Extensions/Coders.swift</string>
@@ -458,7 +452,6 @@
 						<string>Scenes/Login/LoginController.swift</string>
 						<string>Scenes/Login/LoginView.swift</string>
 						<string>Scenes/Login/LoginView.xib</string>
-						<string>ServiceResponses/ApiResponse.swift</string>
 						<string>Services/HTTPRequest/HTTPRequest.swift</string>
 						<string>Services/HTTPRequest/NetworkDataResponse.swift</string>
 						<string>Services/HTTPRequest/ServiceRequestAdaptor.swift</string>

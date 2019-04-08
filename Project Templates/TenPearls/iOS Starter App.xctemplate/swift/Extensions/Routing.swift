@@ -1,8 +1,8 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
 
 import UIKit
 
-extension BaseController {
+extension UIViewController {
     
     var isModal: Bool {
         

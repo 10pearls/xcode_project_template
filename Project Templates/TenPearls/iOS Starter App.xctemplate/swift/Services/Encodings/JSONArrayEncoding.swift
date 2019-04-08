@@ -1,4 +1,4 @@
-// ___FILEHEADER___.
+// ___FILEHEADER___
 //
 // https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#custom-encoding
 

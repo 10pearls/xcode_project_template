@@ -156,13 +156,6 @@
 								<string>BaseController</string>
 							</array>
 						</dict>
-						<key>Extensions/LocalizedString.swift</key>
-						<dict>
-							<key>Path</key>
-							<string>swift/Extensions/LocalizedString.swift</string>
-							<key>Group</key>
-							<string>Extensions</string>
-						</dict>
 						<key>Extensions/Routing.swift</key>
 						<dict>
 							<key>Path</key>
@@ -434,7 +427,6 @@
 						<string>Entities/NavigationBarItem.swift</string>
 						<string>Entities/User.swift</string>
 						<string>Extensions/Routing.swift</string>
-						<string>Extensions/LocalizedString.swift</string>
 						<string>Extensions/BaseController/ViewLoader.swift</string>
 						<string>Extensions/ViewLayerUtils.swift</string>
 						<string>Extensions/Coders.swift</string>

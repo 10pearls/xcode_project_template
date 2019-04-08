@@ -16,7 +16,10 @@ extension NavigationBarProtocol where Self: BaseController {
     
     func setupNavigationBar() {
         setupRightNavigationButtons(rightBarButtons: navigationBarRightButtons())
-        setupLeftNavigationButtons(leftBarButtons: navigationBarLeftButtons())
+        
+        let button = navigationController?.viewControllers.count == 1 && !isModal ? [createMenuBarButton()] : [createBackBarButton()]
+        let leftButtons: [NavigationBarItem] = button + navigationBarLeftButtons()
+        setupLeftNavigationButtons(leftBarButtons: leftButtons)
 
         //Do everything else with the Nav Bar here...
     }

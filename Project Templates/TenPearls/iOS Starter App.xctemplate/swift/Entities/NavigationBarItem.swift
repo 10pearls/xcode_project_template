@@ -5,7 +5,7 @@ import UIKit
 enum BarItemType {
     
     case titleButton(title: String)
-    case imageButton(image: UIImage)
+    case imageButton(image: UIImage?)
     
 }
 

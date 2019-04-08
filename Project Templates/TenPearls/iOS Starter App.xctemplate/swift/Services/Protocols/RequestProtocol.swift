@@ -1,9 +1,10 @@
-//___FILEHEADER___
-
-import UIKit
+// ___FILEHEADER___
 
 protocol RequestProtocol {
     
-    func paramDictionary() -> [String: AnyObject]?
-    func makeRequest<T: Decodable>(_ model: T.Type, block: @escaping ServiceResponse )
+    func requestTimeout() -> Double
+    func queryParameters() -> [(key: String, value: String)]?
+    func requestBody() -> [String: Any]?
+    func makeRequest<T: Decodable>(_ model: T.Type)
+    
 }

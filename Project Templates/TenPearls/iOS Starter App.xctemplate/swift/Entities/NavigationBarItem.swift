@@ -1,40 +1,40 @@
-//___FILEHEADER___
+// ___FILEHEADER___
 
 import UIKit
 
-typealias NavButtonSelector = () -> Void
+enum BarItemType {
+    
+    case titleButton(title: String)
+    case imageButton(image: UIImage?)
+    
+}
 
 class NavigationBarItem: NSObject {
-
+    
     // MARK: - Members
+    
     var title: String?
-    var imageName: String?
+    var image: UIImage?
     var tag: Int?
-    var onClickSelector: NavButtonSelector
-
+    var onClickSelector: Selector
+    var target: Any
+    
     // MARK: - Constructors
-    init(title: String?, imageName: String?, tag: Int?, onClickSelector: @escaping NavButtonSelector) {
-        self.title = title
-        self.imageName = imageName
+    
+    init(type: BarItemType, tag: Int? = 0, target: Any, onClickSelector: Selector) {
         self.tag = tag
         self.onClickSelector = onClickSelector
-
+        self.target = target
+        
+        switch type {
+        case .titleButton(let title):
+            self.title = title
+        case .imageButton(let image):
+            self.image = image
+        }
+        
         super.init()
     }
-
-    convenience init(title: String, tag: Int, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: title, imageName: nil, tag: tag, onClickSelector: onClickSelector)
-    }
-
-    convenience init(imageName: String, tag: Int, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: nil, imageName: imageName, tag: tag, onClickSelector: onClickSelector)
-    }
-
-    convenience init(title: String, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: title, imageName: nil, tag: nil, onClickSelector: onClickSelector)
-    }
-
-    convenience init(imageName: String, onClickSelector: @escaping NavButtonSelector) {
-        self.init(title: nil, imageName: imageName, tag: nil, onClickSelector: onClickSelector)
-    }
+    
 }
+

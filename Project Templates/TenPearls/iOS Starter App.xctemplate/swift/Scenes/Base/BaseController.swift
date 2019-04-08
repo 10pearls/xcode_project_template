@@ -1,10 +1,11 @@
-//___FILEHEADER___
+// ___FILEHEADER___
 
 import UIKit
 
-class BaseController: UIViewController, NavigationBarProtocol {
+class BaseController: UIViewController, ErrorHandling, NavigationBarProtocol {
 
     // MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -15,8 +16,6 @@ class BaseController: UIViewController, NavigationBarProtocol {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.navigationController?.navigationBar.isHidden = false
         
         (self.view as? BaseView)?.viewWillAppear()
     }
@@ -33,11 +32,29 @@ class BaseController: UIViewController, NavigationBarProtocol {
         (self.view as? BaseView)?.viewWillDisappear()
     }
     
-    func navigationBarRightButtons() -> [NavigationBarItem] {
-        return [] //Will be overriden by individual Controllers
+    // MARK: - Back/Hamburger Button handling
+    
+    func createBackBarButton() -> NavigationBarItem {
+        let menuButton = NavigationBarItem(type: .imageButton(image: UIImage(named: "back-btn")), target: self, onClickSelector: #selector(onActionBack(sender:)))
+        return menuButton
     }
     
-    func navigationBarLeftButtons() -> [NavigationBarItem] {
-        return [] //Will be overriden by individual Controllers
+    @objc
+    func onActionBack(sender: UIBarButtonItem) {
+        if isModal {
+            dismiss(animated: true, completion: nil)
+        } else {
+            _ = pop()
+        }
     }
+    
+    func createMenuBarButton() -> NavigationBarItem {
+        let menuButton = NavigationBarItem(type: .imageButton(image: UIImage(named: "menu-btn")), target: self, onClickSelector: #selector(onMenuButtonTapped))
+        return menuButton
+    }
+    
+    @objc
+    func onMenuButtonTapped() {
+    }
+    
 }

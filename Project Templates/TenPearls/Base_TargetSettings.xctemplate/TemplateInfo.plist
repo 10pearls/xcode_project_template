@@ -64,7 +64,7 @@
                                 <key>SharedSettings</key>
                                 <dict>
                                     <key>SWIFT_VERSION</key>
-                                    <string>4.0</string>
+                                    <string>4.2</string>
                                 </dict>
                             </dict>
                         </array>

@@ -20,7 +20,7 @@ main() {
 	unzip -a "/tmp/$repoZipFileName.zip" -d "/tmp/"
 
 	cd "/tmp/$repoZipFileName"*/
-	cd "./InstallerScripts"
+
 	sh $projectTemplateDeploymentScript $repoZipFileName
 
 	sh $fileTemplateDeploymentScript $repoZipFileName

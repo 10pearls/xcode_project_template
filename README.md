@@ -1,15 +1,18 @@
 
-# Installing 10pearls iOS template
+# Getting Started
 
 1. Open the Terminal
 2. Copy and paste the following command and hit enter
 
 ```sh
-bash <(curl -s http://10.0.0.192/git/xcode_project_template/raw/master/install.sh)
+bash <(curl -s http://10.0.0.192/git/xcode_project_template/raw/master/Scripts/install.sh)
 ```
-3. Use following command to run and update iOS template
+
+# How to get the 10Pearls Seed Project
+
+Use following command install/update iOS seed project
 
 ```sh
 xcode-seed -u
 ```
-4. Enjoy
+Happy Coding

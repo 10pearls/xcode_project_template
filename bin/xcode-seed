@@ -9,6 +9,11 @@ repoZipFileName="xcode_project_template-master"
 
 main() {
 
+	if [ $SHOULD_UPDATE = false ] ; then
+		show_error
+		exit
+	fi
+
 	echo "Downloading content from repository..."
 	curl -L $repoUrl > "/tmp/$repoZipFileName.zip"
 	echo "Unzipping content..."
@@ -28,6 +33,19 @@ main() {
 
 	echo "INSTALLATION COMPLETED..."
 }
+
+show_error() {
+ echo "Error: Please use -u flag to update xcode seed project."
+}
+
+SHOULD_UPDATE=false
+
+while getopts ':u' flag; do
+  case "${flag}" in
+	u) SHOULD_UPDATE=true ;;
+    *) show_error; exit; ;;
+  esac
+done
 
 # run scripts
 main

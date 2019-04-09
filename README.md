@@ -2,8 +2,13 @@
 
 1. Open the Terminal
 2. Copy and paste the following command and hit enter
-3. Enjoy
 
 ```sh
-$ bash <(curl -s http://10.0.0.192/git/xcode_project_template/raw/master/INSTALLER.sh)
+bash <(curl -s http://10.0.0.192/git/xcode_project_template/raw/template_binary/install.sh)
 ```
+3. Use following command to run and update iOS template
+
+```sh
+xcode-seed
+```
+4. Enjoy

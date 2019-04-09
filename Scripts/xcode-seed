@@ -1,8 +1,8 @@
 #!/bin/bash
 
-projectTemplateDeploymentScript="./install_project_template.sh"
-fileTemplateDeploymentScript="./install_file_template.sh"
-UserDataDeploymentScript="./install_user_data.sh"
+projectTemplateDeploymentScript="./Scripts/install_project_template.sh"
+fileTemplateDeploymentScript="./Scripts/install_file_template.sh"
+UserDataDeploymentScript="./Scripts/install_user_data.sh"
 
 repoUrl="http://10.0.0.192/git/xcode_project_template/repository/archive.zip"
 repoZipFileName="xcode_project_template-master"

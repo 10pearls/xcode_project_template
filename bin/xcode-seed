@@ -1,12 +1,13 @@
 #!/bin/bash
-projectTemplateDeploymentScript="./install_project_template_v3.sh"
+
+projectTemplateDeploymentScript="./install_project_template.sh"
 fileTemplateDeploymentScript="./install_file_template.sh"
 UserDataDeploymentScript="./install_user_data.sh"
 
 repoUrl="http://10.0.0.192/git/xcode_project_template/repository/archive.zip"
 repoZipFileName="xcode_project_template-master"
 
-function main() {
+main() {
 
 	echo "Downloading content from repository..."
 	curl -L $repoUrl > "/tmp/$repoZipFileName.zip"
@@ -28,6 +29,5 @@ function main() {
 	echo "INSTALLATION COMPLETED..."
 }
 
-
-#run script
+# run scripts
 main

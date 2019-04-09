@@ -2,10 +2,7 @@
 
 userDataDir="$HOME/Library/Developer/Xcode/UserData"
 
-fileDownloadUrl=https://a.uguu.se/EZ06sxFvp24c_IDETemplateMacros.plist
-fileName=IDETemplateMacros.plist
-
-function doesUserDataExist(){
+function doesUserDataExist() {
 	[ -d "$userDataDir" ]
 }
 

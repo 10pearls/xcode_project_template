@@ -15,7 +15,15 @@ main() {
 	fi
 
 	echo "Downloading content from repository..."
-	curl -L $repoUrl > "/tmp/$repoZipFileName.zip"
+	curl_res=$(curl -LSs $repoUrl -o /tmp/$repoZipFileName.zip -w %{http_code} --connect-timeout 30)
+	if [ ! -z "$curl_res" ] && [ $curl_res -eq 200 ]
+	then
+		echo "Downloaded"
+	else
+		echo "Terminating script execution due to error in downloading..."
+		exit
+	fi
+
 	echo "Unzipping content..."
 	unzip -a "/tmp/$repoZipFileName.zip" -d "/tmp/"
 

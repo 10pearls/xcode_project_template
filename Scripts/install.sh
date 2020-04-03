@@ -1,4 +1,7 @@
-#!/bin/bash
+used_shell=$(ps -o comm= -p $$)
+echo "Shell being used: $used_shell"  
+
+#!/bin/$used_shell
 
 xcode_seed_filename="xcode-seed"
 dir_bin_root="/usr/local/"
@@ -25,7 +28,7 @@ then
     echo "Directory doesn't exists"
     echo "Checking directory create permission..."
     stat=$(stat -f '%A' $dir_bin_root)
-    if [ $stat -ne 777 ] || [ $stat -eq 755 ] && [ $uid -ne 0 ]
+    if [ $stat -ne 777 ] && [ $stat -ne 775 ] &&  ([ $stat -eq 755 ] && [ $uid -ne 0 ])
     then
         echo "Create directory permission on $dir_bin_root is not available. You need to either run this script with sudo or contact administrator to provide this user sufficient access."
         echo "Terminating script execution..."
@@ -38,9 +41,9 @@ else
     echo "Directory exists"
     is_dir_already_exist=1
     stat=$(stat -f '%A' $dir_bin)
-    if [ $stat -ne 777 ] || [ $stat -eq 755 ] && [ $uid -ne 0 ]
+    if [ $stat -ne 777 ] && [ $stat -ne 775 ] && [ [ $stat -eq 755 ] && [ $uid -ne 0 ] ]
     then
-        echo "Create directory permission on $dir_bin is not available. You need to either run this script with sudo or contact administrator to provide this user sufficient access."
+        echo "Create file permission on $dir_bin is not available. You need to either run this script with sudo or contact administrator to provide this user sufficient access."
         echo "Terminating script execution..."
         exit
     fi

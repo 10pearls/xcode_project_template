@@ -34,7 +34,7 @@ Follow the instructions below to create a new Xcode project using the project te
 2. In the project template selection dialog, scroll to the bottom to view `TenPearls` category.
 3. Select `iOS Starter App` and press `Next`.
 4. Fill in the project information and programming language to use.
-5. Before pressing `Next`, uncheck both `Include UI Tests` and `Include Unit Tests`.
+5. Before pressing `Next`, **uncheck** both `Include UI Tests` and `Include Unit Tests`.
 6. Choose project folder location and press `Create`.
 7. Close the opened Xcode project window.
 8. Navigate to project folder location via terminal.

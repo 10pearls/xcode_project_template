@@ -26,6 +26,16 @@ $ xcode-seed -u
 
 This commands needs to be executed at least once. Running it for the first time will add the project and file templates to Xcode. Successive execution of the command will update the templates if needed.
 
+### Seed Project Version
+
+In order to determine the current and server version of xcode-seed file, run the following command.
+
+```
+$ xcode-seed -v
+```
+
+This commands will determine the version of the server file and will compare it with your current version. Successive execution of the command will display both server and in-use versions and will let us know if it requires an update.
+
 ## Try out the templates
 
 ### Creating a new project
@@ -59,9 +69,9 @@ Follow the instructions below to create a new Scene within a project using the f
 8. A `Controller`, `View` and `xib` should now populate the newly created group and are waiting to be coded into.
 
 ### Adding Navigation Bar Buttons to a Controller
-To add navigation bar buttons to a controller that is a subclass of `BaseController`, override the `navigationBarLeftButtons` and `navigationBarRightButtons` to return a array of `NavigationBarItem`. 
+To add navigation bar buttons to a controller that is a subclass of `BaseController`, **override** the `navigationBarLeftButtons` and `navigationBarRightButtons` to return a array of `NavigationBarItem`. 
 ```
-func navigationBarLeftButtons() -> [NavigationBarItem] {
+override func navigationBarLeftButtons() -> [NavigationBarItem] {
 	let addBtn = NavigationBarItem(type: .titleButton(title: "+"), target: self, onClickSelector: #selector(onAddbtnTap))
 	return [addBtn]
 }

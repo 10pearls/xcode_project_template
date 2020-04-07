@@ -1,4 +1,7 @@
-#!/bin/bash
+used_shell=$(ps -o comm= -p $$)
+echo "Shell being used: $used_shell"  
+
+#!/bin/$used_shell
 
 projectTemplateDeploymentScript="./Scripts/install_project_template.sh"
 fileTemplateDeploymentScript="./Scripts/install_file_template.sh"
@@ -6,6 +9,11 @@ UserDataDeploymentScript="./Scripts/install_user_data.sh"
 
 repoUrl="http://10.0.0.192/git/xcode_project_template/repository/archive.zip"
 repoZipFileName="xcode_project_template-master"
+
+metaFilename="meta.xml"
+metaUrl="http://10.0.0.192/git/xcode_project_template/raw/master/$metaFilename"
+
+current_version="0.0.1"
 
 main() {
 
@@ -42,15 +50,64 @@ main() {
 	echo "INSTALLATION COMPLETED..."
 }
 
+get_xml_node () { 
+	local IFS=\> ; 
+	read -d \< E C ;
+}
+
 show_error() {
  echo "Error: Please use -u flag to update xcode seed project."
 }
 
+get_version() {
+	http_status=$(curl -LSs $metaUrl -o "/tmp/$metaFilename" -w %{http_code} --connect-timeout 30)
+	if [ ! -z "$http_status" ] && [ $http_status -eq 200 ]
+	then
+		server_version=''
+		while get_xml_node; do
+		if [[ $E = 'Version' ]]; then
+			server_version=$C
+			break
+		fi
+		done < "/tmp/$metaFilename"
+		echo "Server version is : $server_version"
+		echo "Current version is: $current_version"	
+
+		upgrade_needed=0
+		for i in {1..3}
+		do
+			server_version_comp=$(echo $server_version | cut -d "." -f $i)			
+			server_version_n=$(expr $server_version_comp)		
+
+			current_version_comp=$(echo $current_version | cut -d "." -f $i)
+			current_version_n=$(expr $current_version_comp)	
+			if [[ current_version_n -lt server_version_n ]]
+			then
+				echo "Upgrade needed"
+				upgrade_needed=1
+				break
+			fi
+		done	
+
+		if [[ upgrade_needed -eq 0 ]]
+		then
+			echo "Already up-to-date"
+		fi
+	else
+		echo "Couldn't fetch server version due to error in connection. Make sure to check your VPN connection."
+		echo "Current version is: $current_version"		
+	fi
+
+	# Performing cleanup for downloaded meta file
+	rm "/tmp/$metaFilename"
+}
+
 SHOULD_UPDATE=false
 
-while getopts ':u' flag; do
+while getopts ':uv' flag; do
   case "${flag}" in
 	u) SHOULD_UPDATE=true ;;
+	v) get_version; exit ;;
     *) show_error; exit; ;;
   esac
 done

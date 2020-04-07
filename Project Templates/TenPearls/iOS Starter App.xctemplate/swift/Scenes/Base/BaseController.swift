@@ -57,4 +57,12 @@ class BaseController: UIViewController, ErrorHandling, NavigationBarProtocol {
     func onMenuButtonTapped() {
     }
     
+    // MARK: - Navigation Bar Protocol Implementation
+    func navigationBarRightButtons() -> [NavigationBarItem] {
+        return []
+    }
+    
+    func navigationBarLeftButtons() -> [NavigationBarItem] {
+        return []
+    }
 }

@@ -113,3 +113,7 @@ Login(userName: "username", password: "password") { result in
 ```
 
 **Note**: Generic configuration such as setting `baseURL` can be made in the `HTTPRequestProtocol` extension. For endpoint specific configuration, override the `HTTPRequestProtocol` methods.
+
+### Contributing
+
+This project welcomes [contribution and suggestion](http://10.0.0.192/git/xcode_project_template/raw/master/docs/contribute.md)

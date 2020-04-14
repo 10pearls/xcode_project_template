@@ -60,7 +60,7 @@ show_error() {
 }
 
 get_version() {
-	http_status=$(curl -LSs $metaUrl -o "/tmp/$metaFilename" -w %{http_code} --connect-timeout 30)
+	http_status=$(curl -LSs $metaUrl -o "/tmp/$metaFilename" -w %{http_code} --connect-timeout 10)
 	if [ ! -z "$http_status" ] && [ $http_status -eq 200 ]
 	then
 		server_version=''
@@ -93,13 +93,13 @@ get_version() {
 		then
 			echo "Already up-to-date"
 		fi
+
+		# Performing cleanup for downloaded meta file
+		rm "/tmp/$metaFilename"		
 	else
 		echo "Couldn't fetch server version due to error in connection. Make sure to check your VPN connection."
 		echo "Current version is: $current_version"		
 	fi
-
-	# Performing cleanup for downloaded meta file
-	rm "/tmp/$metaFilename"
 }
 
 SHOULD_UPDATE=false

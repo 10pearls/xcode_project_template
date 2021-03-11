@@ -7,11 +7,11 @@ projectTemplateDeploymentScript="./Scripts/install_project_template.sh"
 fileTemplateDeploymentScript="./Scripts/install_file_template.sh"
 UserDataDeploymentScript="./Scripts/install_user_data.sh"
 
-repoUrl="http://10.0.0.192/git/xcode_project_template/repository/archive.zip"
+repoUrl="https://github.com/10pearls/xcode_project_template/archive/master.zip"
 repoZipFileName="xcode_project_template-master"
 
 metaFilename="meta.xml"
-metaUrl="http://10.0.0.192/git/xcode_project_template/raw/master/$metaFilename"
+metaUrl="https://raw.githubusercontent.com/10pearls/xcode_project_template/master/$metaFilename"
 
 current_version="0.0.1"
 

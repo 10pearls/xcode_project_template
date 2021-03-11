@@ -78,7 +78,7 @@ fi
 
 
 echo "Downloading..."
-curl_res=$(curl -OSsw %{http_code} --connect-timeout 30 http://10.0.0.192/git/xcode_project_template/raw/master/Scripts/xcode-seed)
+curl_res=$(curl -OSsw %{http_code} --connect-timeout 30 https://raw.githubusercontent.com/10pearls/xcode_project_template/master/Scripts/xcode-seed)
 echo "Response code: $curl_res"
 if [ ! -z "$curl_res" ] && [ $curl_res -eq 200 ]
 then

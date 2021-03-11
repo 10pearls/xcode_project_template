@@ -11,7 +11,7 @@ This project adds a new project and file template within Xcode. Currently both `
 Run the following command within the terminal to install the `xcode-seed` script. This should only be done once as any further changes are to be made by the `xcode-seed` script.
 
 ```
-$ bash -c "$(curl -s http://10.0.0.192/git/xcode_project_template/raw/master/Scripts/install.sh)"
+$ bash -c "$(curl -s https://raw.githubusercontent.com/10pearls/xcode_project_template/master/Scripts/install.sh)"
 ```
 
 **Note:** The command executed above only installs the `xcode-seed` script. No changes to Xcode project and file templates have been made so far.
@@ -116,4 +116,4 @@ Login(userName: "username", password: "password") { result in
 
 ### Contributing
 
-This project welcomes [contribution and suggestion](http://10.0.0.192/git/xcode_project_template/raw/master/docs/contribute.md)
+This project welcomes [contribution and suggestion](https://github.com/10pearls/xcode_project_template/blob/master/docs/contribute.md)
